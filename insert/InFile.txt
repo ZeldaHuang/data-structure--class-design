@@ -1,1 +1,485 @@
-Based on the authors' market leading data structures books in Java and C++, this book offers a comprehensive, definitive introduction to data structures in Python by authoritative authors. Data Structures and Algorithms in Python is the first authoritative object-oriented book available for Python data structures. Designed to provide a comprehensive introduction to data structures and algorithms, including their design, analysis, and implementation, the text will maintain the same general structure as Data Structures and Algorithms in Java and Data Structures and Algorithms in C++. Begins by discussing Python's conceptually simple syntax, which allows for a greater focus on concepts. Employs a consistent object-oriented viewpoint throughout the text. Presents each data structure using ADTs and their respective implementations and introduces important design patterns as a means to organize those implementations into classes, methods, and objects. Provides a thorough discussion on the analysis and design of fundamental data structures. Includes many helpful Python code examples, with source code provided on the website. Uses illustrations to present data structures and algorithms, as well as their analysis, in a clear, visual manner. Provides hundreds of exercises that promote creativity, help readers learn how to think like programmers, and reinforce important concepts. Contains many Python-code and pseudo-code fragments, and hundreds of exercises, which are divided into roughly 40% reinforcement exercises, 40% creativity exercises, and 20% programming projects.
+
+ PREVIEW
+ Bishop 2 
+ 
+to (a conception of) nature that is being explored and tested, and which troubles their 
+conceptions of subjectivity in ways that are both disturbing and reassuring to the speaker of 
+the text and the reader. As these melancholic expressions and performances are confronted 
+by what they call nature, that confrontation in turn facilitates the speaker’s comprehension 
+of the deeper philosophical issues from which his melancholia originated. What I am 
+referring to here with the term melancholia are expressions of loss, trauma, failure, 
+depression and ambivalence which appear in these texts. While these affects should by no 
+means be conflated, they all do bear the mark of melancholia even when, as in the case of 
+Shelley, melancholia also doubles as mourning in the text. Nature communicates this deeper 
+comprehension to the speaker because, as Timothy Morton argues, the speaker’s relationship 
+to himself—melancholia—is identical to the subject’s relationship to nature. This 
+relationship, this ecology, teaches the subject not only how to approach nature but also how 
+to approach the alterity inherent to himself.  
+While themes of ecology and melancholia run through many romantic writers, Clare, 
+Shelley and Keats stand out, both because of their dominant places in the canon and in spite 
+of it. While Clare is the most recent inclusion into the canon, his position is largely due to 
+the rise of ecocriticism which I explore below. Despite his reputation as the writer of 
+naturalist, pastoral lyrics, the poems I read here are disarming in their unceremonious 
+dismantling of subjectivity and the earth it resides in. The lack of scholarly attention to this 
+aspect of his oeuvre in addition to its apocalyptic language allow for more important and 
+often neglected insights into the eco-critical project that only Timothy Morton’s work on 
+“dark ecology” has begun to explore in depth. While neither Keats nor Shelley suffer from a 
+lack of scholarship specific issues in the scholarship propelled their inclusion in my 
+project—in particular what I judge to be insufficient emphasis on the seriousness of their 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 3 
+ 
+melancholic crises and refusal to resolve them even through the offices of art.   Adonais is 
+the longest text discussed here, and the lack of scholarship on the feature that I read as the 
+most prominent in the poem—the speaker’s suicidal ideation—forced me to bypass many of 
+the incumbent difficulties of the text in order to discuss it. Keats, it is often said by scholars, 
+was the least educated of the Romantics, and with some competition from Shelley, the most 
+tragic. His work, has not then by extension invested with the same philosophical weight 
+Shelley, Coleridge or Wordsworth’s was. I not only wanted to remedy this, but also extend 
+eco-critical readings of romantic poetry—and here, too, in particular Morton’s reading of 
+dark ecology—to provide a framework by which to comprehend, not minimize or dismiss 
+his melancholia. My reading engages this larger project through an exploration of the space 
+that arises at the intersection of nature and melancholy in these romantic texts. 
+This dissertation is deeply indebted to the paradigm shift ecocriticism has forged 
+within literary criticism. Ecocriticism is a dynamic revisionist theory which seeks to 
+reconceptualize scenes of human-nonhuman interaction in order to promote ecological 
+insights about literature, culture and philosophy. While it today approaches a broad range of 
+texts and historical periods, it is no accident that ecocriticism partly originated in the 
+scholarship of British romanticism. Scholars have recognized nature as an essential presence 
+in romantic poetry since its origin. Whether affirmed or elided, the position of nature in 
+romanticism has always existed within a contested space. How one values this has often 
+determined the poet’s reputation throughout the 20th century. Two scholars who exemplify 
+such trends best are M.H. Abrams and Geoffrey Hartmann, who along with Harold Bloom 
+and Earl Wasserman initiated the postwar reappraisal of British romanticism. I single out 
+Abrams and Hartman out here because they represent the opposing ways of reading that 
+exist within romanticism today, and which we see recur in ecocriticism. While I am not 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 4 
+ 
+suggesting a neat mapping of one critique upon another, interesting parallels do arise, which 
+we would do well to make note of.  
+ In The Mirror and the Lamp (1953) and Natural Supernaturalism (1971), Abrams 
+presents a narrative of romanticism that reads it as a break from the principles of 
+neoclassicism through a series of inventions such as ‘biodicy,’ a term he draws from theodicy 
+(NS 95). His use of the term ‘biodicy’ which espouses the mechanics of a theological 
+narrative, exemplifies Abram’s approach by seeking to produce a body of knowledge based 
+on an affirmative, transcendental understanding of humanity (Kirschner 195). Geoffrey 
+Hartman’s argues through his readings of William Wordsworth in Wordsworth’s Poetry 1787
+1814 and elsewhere for the presence of a dialectic in which the poet negotiates between 
+nature and imagination to forge his vision (Fry 541-2). Hartman employs the terms 
+apocalypse and akedah to clarify this negotiation. While scenes of apocalypse draw the poet 
+towards transcendence, scenes of akedah “bind” the poet to nature (225). Barth reminds the 
+reader in his account of Hartman’s work that the poet continually posits scenes of 
+apocalypse as akedah in order to “maintain his hold on the natural world” (Hartman 225; 
+Barth 27).  While Abrams’ reading presents a secularized narrative of Christian 
+transcendence in which the dialectic of nature serves an affirmation of human 
+consciousness, Hartman’s articulation of apocalypse and akedah not only accounts for 
+nature’s dual powers of creation and destruction but posits a powerful ambivalence that 
+paralyzes the poet. While these scholars may seem to have little to do with the insights of 
+ecocriticism, they do in fact draw the map by which contemporary scholars find themselves. 
+Like Abrams, Bate bases his criticism on an adherence to an affirmative aesthetic ideology, 
+while Hartman’s recognition of the poet’s ambivalence looks forward to Morton’s work.   
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 5 
+ 
+While Jonathan Bate and James McKusick by no means invented ecocriticism, nor 
+would claim to, the publication of their books, Song of the Earth and Green Writing: Romanticism 
+and Ecology, (both published in 2000) represent for many scholars ecocriticism’s entrance into 
+mainstream academic thought. While Wordsworth had again suffered a devaluation of sorts 
+at the hands of new historicism, ecocriticism positioned the poet’s relationship to nature as 
+central to romanticism and crucial to our contemporary condition. Bate and McKusick 
+accomplish this by putting forward readings of Wordsworth, as well as of Clare and others, 
+which emphasize the poet’s interest, desire, and need for communion with nature. The 
+below passages, both of which critique the picturesque observation of nature-as-art in favor 
+of immersion in nature, exemplify their approaches. 
+  Bate writes  
+Nature is made capable of feeling. The ‘I’ is written out, or rather absorbed into the 
+scene….Wordsworthian ‘deep seclusion’ means dissolution of the self from 
+perceiving eye into ecologically connected organism. The vocabulary is not confined 
+to the language of the eye, the stock in trade of the picturesque gazer…The key 
+word—emphasized through Wordsworth’s favourite metrical trick of suspension at 
+the line-ending—is ‘connect’. Where the picturesque looks, the ecopoetic connects. 
+(145)  
+Bate argues against readings of Wordsworth as a picturesque poet of the ‘eye’ which thus 
+implied a foregrounding of the text conveying the visual viewpoint of the poet and often 
+conventionalized framing of the natural world according to the canons of art. Bate contrasts 
+the poet who sees with the (educated) eye to the poet immersed in nature who abandons the 
+rhetoric of the picturesque for a “dissolution of the self” (145).  
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 6 
+ 
+McKusick’s ecocriticism takes Clare as exemplary and approaches Clare from a 
+historicist perspective, contextualizing his poetry according to the political, economic and 
+scientific events of the period. But he similarly distinguishes Clare’s poetry from the tradition 
+of the picturesque, presenting Clare as absolutely original, “unprecedented in the English
+speaking world” (82).  He writes  
+While Clare rejoices in the beauty of the Earth, he does not primarily see it as 
+existing for human purposes, and he resists its appropriation for economic use or 
+even aesthetic contemplation. The natural world is not comprised of “resources,” or 
+“scenery”; Clare regards himself as a normal participant in the living world around 
+him, just another inquisitive mammal going about its daily activities. As a result, his 
+poems rarely “set the scene” in the approved picturesque manner; he provides an 
+accumulation of close-up details rather than sweeping perspectives. (81) 
+Both Bate and McKusick present readings which elide the speaker’s subjectivity to promote 
+scenes of blissful immersion or direct engagement in nature. While these are in some ways 
+appealing readings of subject-object cohesion, questions arise immediately. In “Green to the 
+Very Door?” Paul Fry criticizes Bate for forwarding an “anthropocentric hubris” that suffers 
+from a metaphysical view of nature (545). This dependence upon a metaphysical framework 
+for understanding nature is what leads me to compare this first-wave of ecocriticism to 
+Abram’s humanist paradigms. Both depend upon a metaphysical framework which does 
+indeed demand an “anthropocentric hubris” through which to read the world around it 
+(545). Ecocritical readings that rely on a positive logic of human immersion in nature do not 
+fail because they are written from the poet’s viewpoint—that is all s/he can do, in a way—
+but because they refuse to account for nature’s alterity, which creates an insurmountable 
+divide between the poet-speaker and nature. We can first intuit accounts of this distance in 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 7 
+ 
+the work of Hartman whose articulations of the poet’s negotiations between vision and 
+nature parallel Morton’s account of the subject’s paralysis when confronted with the ethical 
+demand.  Hartman’s account of Wordsworth looks forward to Morton’s, not because it is 
+preoccupied with questions of ecology, but because it openly accounts for the ambivalence 
+of the poet in his negotiation between apocalypse and akedah, transcendence and nature.  
+Timothy Morton presents his critique of Bate and McKusick’s brand of ecocriticism 
+in his 2007 book Ecology without Nature and his 2008 essay “John Clare’s Dark Ecology.” 
+While Morton’s reading of John Clare’s poem Lines: “I AM” is a small part of his book, the 
+choice of lyric is not accidental. While Bate reads Clare through the work of Gaston 
+Bachelard in Song of the Earth, he promotes the same revisionary reading of Clare as 
+McKusick, the combined influence of their work effectively guaranteeing the inclusion of 
+Clare in the Romantic canon.3 Morton draws a stark contrast to the Clare of McKusick and 
+Bate by reading a lyric which lacks an affirming pastoral frame within which the speaker is 
+easily subsumed, and instead experiences ambivalence and doubt when confronted with the 
+natural world. Morton argues that a poem which thinks ecologically is not one that creates a 
+false sense of communion, but instead tarries with the ambivalence the desire for action 
+creates while questioning the metaphysical category of nature. His work thus marks a clear 
+break from the work of Bate and McKusick. Morton even extends this stripping away of 
+metaphysics to include the category of nature itself. He argues that scholars must stop using 
+the term Nature as a metaphysical concept because environmental theory must move away 
+from a hierarchy of essences to conceiving of the world as a dynamic egalitarian network of 
+relations, an ever more expansive ecosystem (“Dark” 179).  
+ Morton’s reassessment of nature shares company with the work of fellow 
+romanticist Alan Liu. Liu defines nature as a political concept, which lacks any metaphysical 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 8 
+ 
+or organic qualities. He writes, “There is no nature except as it is constituted by acts of 
+political definition made possible by particular forms of government” (104). In spite of Liu’s 
+radically political definition clearly rooted in new historicism, he shares with Morton the 
+desire to obliterate any ideology that would prefer to constrain the organic dynamism of 
+ecology in favor of the essentialist category of nature. They effectively argue that we can only 
+preserve the “natural” world by destroying the concept of nature rhetorically (EWN 185). 
+While I agree with Morton’s anti-essentialist reading of nature, which would effectively 
+dismantle our metaphysical binaries, I do not believe that it necessitates an abandonment of 
+the very term “nature” which I continue to use throughout this dissertation. Replacing one 
+term in favor of another, even of another set of terms, hardly resolves a metaphysical 
+quandary.  
+Morton’s work functions as an important intervention into contemporary 
+ecocriticism which remains dominated by a positive logic of subject immersion in, or union 
+with, nature. He argues that the traditional valuation of interconnectedness with nature as an 
+ideal is an “ideological fantasy” that in fact impedes our understanding of the environment 
+(“Dark” 190). This fantasy inhibits the subject from realizing that while s/he is forever 
+organically interconnected to nature, s/he will never have the kind of psychic symbiosis 
+naturalists and activists often laud as ideal. Morton argues that ecological insight will not 
+occur through immersion, but a more counterintuitive move—through (or in the experience 
+of) melancholia. His reading of Clare is exemplary for the larger argument. He reads in the 
+Clare text a subjectivity that undermines the ideology of immersion by displaying a severe 
+despondency or as Morton terms it, dark ecology, instead. Melancholia epitomizes the 
+subject-object relationship because of the subject’s divestment from his/her own life. 
+Melancholia acts as a sort of half-death of subjectivity, or a paralysis. Unable to be 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 9 
+ 
+authentically present with herself or with nature, the melancholic is thus wounded by both. 
+Dark ecology reforms the subject’s relation to nature, and herself.  Melancholy is the 
+quintessential model of alterity around which one’s identity narrates itself making it the 
+performance of ecology on the level of subjectivity. 
+While the theoretical approach of my dissertation as it informs my readings, with 
+their teeming discussions of birds and basil, can be accurately described as ecocriticism, it is 
+important to elaborate this claim. As I state throughout this dissertation, the ecological 
+theory that Timothy Morton elaborates in Ecology without Nature presents a stark contrast 
+to the work of those critics to whom we give credit for establishing ecocriticism as crucial to 
+romantic studies. While we are by now familiar with Morton’s opposition to subject-object 
+immersion, which mimics the construction of the subject’s identity, he goes a step farther by 
+challenging his readers to apply the logic of ecology to the concept of identity and 
+subjectivity in themselves. Like ‘nature,’ the subject is just a construction, a metaphysical 
+category which bears no resemblance to the actions of a person (“John Clare” 175). Morton 
+redefines the subject as a “potentially infinite series of alterities” that fragment and unravel 
+infinitely (EWN 175). The subject, then, is merely a vessel upon or through which a series of 
+performances have taken place and then, qua author, draws on to generate a narrative that 
+delineates its boundaries as the supposed coherent underpinning of those boundaries. Like 
+nature, subjectivity is an ideological fantasy, imagined and yet always absent. While not 
+altogether obvious when applied to nature, Morton’s portrait of the subject shares more in 
+common with psychoanalysis than ecocriticism. While he argues that the subject is always 
+already a “potentially infinite series of alterities” he is also describing a traumatized subject, 
+whose splintered identity is so shattered by events that s/he is unable to maintain a coherent 
+narrative. “Wherever we look for the self we will not find it” (EWN 175,176; Žižek 180-1). 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 10 
+ 
+I underline the destructive nuances in Morton’s account of subjectivity in order to 
+contrast them to David Eng and David Kazanjian’s accounting of loss in the preface to the 
+collection of essays they edited together entitled Loss: The Politics of Mourning.  Describing 
+a series of photographs entitled In Between Days (Without You) by Dean Sameshina, they 
+write 
+‘In Between Days (Without You)’ thus offers a counterintuitive understanding of lost 
+bodies, spaces, and ideals by configuring absence as a potential presence. Loss as a 
+whole embraces this counterintuitive perspective. Instead of imputing to loss a 
+purely negative quality, the essays in this collection apprehend it as productive rather 
+than pathological, abundant rather than lacking, social rather than solipsistic, militant 
+rather than reactionary…They insist that, if loss is known only by what remains of it, 
+then the politics and ethics of mourning lie in the interpretation of what remains—
+how remains are produced and animated, how they are read and sustained. (ix) 
+While Morton disfigures the concept of the subject by deterritorializing it, Eng and 
+Kazanjian’s definition liberates the category of loss by imbuing it with the possibility of 
+political and ethical transformation. Without invoking the word, the authors are here seeking 
+a redemption of the loss that comes to engulf what remains of the subject.  The longing 
+which produces melancholy and all of its innumerable affects can be recuperated in some 
+fashion. The lost object cannot be mimicked or reproduced, but there is an element of 
+potential within this space of loss which can forge meaning. Eng and Kazanjian do not 
+accept grief and loss as a series of symptoms to be overcome on the road to banality, but 
+envision it as a way-of-being, an ethical and political act that can form the foundation of a 
+life-philosophy.  
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 11 
+ 
+While both Morton on the one hand and Eng and Kazanjian on the other posit 
+origins in the activity of tarrying with loss, they approach the problem from opposing 
+directions, each account highlighting what in the other’s account is problematic. While 
+Morton would perhaps be wary of any attempts at recuperating a positive meaning from 
+melancholy, Eng and Kazanjian’s insistence on narrative interpretation makes plain what 
+Morton refuses to account for: s/he who admits to being “a potentially infinite series of 
+alterities” is in fact already psychotic (175).  But Eng and Kazanjian emphasize the 
+production of meaning in a way very different from Morton. It may be, however their 
+conscientious attention to loss and grief presents parallels to Morton’s dark ecology. In some 
+ways, despite their differences these accounts are the other’s dialectical equivalent. While 
+Eng and Kazanjian seek to mitigate the effects of trauma on vulnerable populations 
+Morton’s work is directed at the gaze of the master, who is responsible for both human and 
+ecological devastation. He seeks the reconnoitering of subjectivity in service of an ethical 
+demand not unrelated to the ethico-political questions raised by Eng and Kazanjian. 
+Because of Clare’s centrality to the dissertation’s argument, I take up his poetry and 
+Morton’s reading of it in my first chapter, “From Her(e) to Eternity: Tracing Alterity 
+through the Poetry of John Clare.” 4 This chapter sets up the theoretical stakes of the 
+dissertation through the discussion of Morton’s theory of dark ecology, which he develops 
+through his reading of John Clare’s poem “Lines: ‘I AM.’” He proposes a 
+reconceptualization of nature, which rejects narratives of immersion “in” nature for a 
+recognition of distance between the subject and nature. This unbreachable distance 
+exemplifies the melancholia which, Morton argues, is fundamental to subjectivity and its 
+relationship to a wider ecology of being.  
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 12 
+ 
+Morton contrasts his reading of melancholy to Freud’s which defines it as a 
+pathological illness, an over-extended and yet incomplete mourning.  He argues that this 
+incompleteness is essential to the melancholic however, as it mirrors the ambivalence the 
+subject feels in witnessing nature. For Morton, the absence the melancholic feels is 
+fundamental to his/her subjectivity, “an irreducible component of subjectivity” (EWN 186, 
+“Dark Ecology” 189). In making this argument, he draws on Lacan’s account of the 
+Cartesian cogito, arguing that the stake of the cogito is less about a given mind-body duality 
+and more of a cleavage between the psyche and the organic material that houses it. It is not 
+an irrevocable separation of mind from body, but a recognition of the distance and absence 
+that structures the relation of the subject and the environment in a way that informs each of 
+the two terms. The psyche is thus a subject always-already in limbo. Affirming the distance 
+or “gap” between subject and nature is not an act of or metaphysical dualism or willful 
+ignorance but produces a “greater fidelity” to the breach that opens the subject’s relation to 
+alterity (EWN 142). It recognizes our shared fragility and vulnerabilities, creating the strong 
+ethical impulse that animates dark ecology. It produces an empathy which is not based on 
+false identification but upon our inherent mutual fragility (EWN 168-9).   
+After laying out the theoretical stakes of dark ecology, I extend Morton’s reading of 
+“Lines: I AM,” to read Clare’s later lyrics. Although Clare’s oeuvre is decidedly pastoral, there 
+are also texts which bear significant apocalyptic elements. I argue that the emergence of this 
+parallels the dissolution of the speaker’s immersion fantasies, which results in the 
+fragmenting of his identity as he envisions apocalyptic scenes. I trace this narrative through: 
+“Lines: I AM,” the Sonnet: “I AM,” “A Vision,” “An Invite to Eternity,” “To Mary,” 
+“Stanzas,” and “Song Last Day.” This is where my reading diverges from Morton’s work. 
+While I produce a reading of Clare’s lyrics following the insights of dark ecology, Morton’s 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 13 
+ 
+own reading of “Lines” does not adequately attend to the figures of ambivalence and 
+destruction which Clare employs in his representations of nature in the other lyrics. I 
+propose that the melancholia we see in “Lines,” which is anchored by the speaker’s 
+ambivalence, and finds comfort in nature, is less and less apparent over the course of the 
+seven texts. His melancholia is displaced by a burgeoning psychosis which chooses instead to 
+destroy the earth through a series of apocalyptic scenes in “A Vision,” “An Invite to 
+Eternity,” and “Song Last Day.” As these readings and the remaining chapters of my 
+dissertation demonstrate, dark ecology is a broad paradigm by which one can interpret lyrical 
+responses to ecology and extend its implications.  
+In my second chapter “‘Love is the Plan, The Plan is Death:’ Suicidal Ideation in 
+Shelley’s Adonais,”5 I demonstrate that the scholarship which remains influential today in the 
+pedagogy and literary criticism of Adonais obscures or minimizes the presence of suicidal 
+elements in the text, causing it to be misread as an elegy that finally embraces life. I argue 
+that an alternate set of criticism exists which in fact positions suicidal ideation as central to 
+the text and which is, finally, more convincing than the tradition of criticism that has proven 
+the more influential. I also draw on the recent work of R. Clifton Spargo, alongside Eng, and 
+Kazanjian, to show why this line of Shelley criticism, one that takes the impress of 
+melancholia seriously, is important to an understanding of the stakes of his poetry.  
+I posit that in the effort to resuscitate the literary reputation of Percy Shelley in the 
+late 1950’s, a reading of Adonais emerged, most notably by Earl Wasserman in The Subtler 
+Language and Shelley: A Critical Reading, which, perhaps due to past accusations that Shelley 
+was ‘effeminate’—Arnold’s “ineffectual angel”—tends to ‘overcorrect’ by presenting 
+readings which are heteronormative and hyper-masculine. While this chapter could be 
+accused of paying a lavish amount of attention to critics whose scholarship is less than 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 14 
+ 
+recent, I chose to engage with this criticism because it still sets the tone of the readings of 
+Shelley that have followed in its wake. The same year Wasserman published The Subtler 
+Language, Harold Bloom remarked in his first book, Shelley’s Mythmaking, that the speaker of 
+Adonais is in fact suicidal (SM 246). In the fifty-five years since, other critics have pursued 
+readings of this theme but few use the word suicidal, instead couching the poet’s intentions 
+in a language of despair or mourning. Ross Woodman (The Apocalyptic Vision in the Poetry of 
+Shelley, 1964), Peter Sacks (The English Elegy, 1987) and William Ulmer ("Adonais and the 
+Death of Poetry," 1993) are all exceptions that I engage with in my reading of the poem.  
+The poet’s movement towards death is not a momentary gesture. He systematically narrates 
+a literary evolution which culminates in an embrace of eternity, not a return to the earth.  
+More particularly, I work through the ethical stakes of the poet’s preference for 
+death through R. Clifton Spargo’s 2004 book Ethics of Mourning: Grief and Responsibility in 
+Elegiac Literature. His work represents an important paradigm shift in literary criticism of the 
+last twenty years. Influenced by the philosophical underpinnings of trauma studies, his work 
+belongs to a growing group of scholarship on mental illness which has moved away from 
+psychoanalysis towards a more synthetic approach informed by the fields of ethics and 
+ecology. Spargo positions ethics as central to an understanding of grief through readings of 
+Levinas and Bernard Williams (6). Drawing on his work, I argue that the poet’s suicidal 
+ideation forges an ethics based on grief and desire. While the poet is mourning the loss of his 
+friend, the grief he displays precedes this event. The speaker attributes the death of Adonais 
+to a negative review which reveals his own deep-seated feelings of failure and longing. His 
+turn to suicide is a response to the realization that he can no longer follow the ideological 
+paradigm he espoused previous to the death of his fellow poet. His mourning becomes a 
+contemplation of alterity as his melancholic fidelity to the world transfers into a desire for 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 15 
+ 
+union with the Eternal beyond the world and the preservation of his literary project. This 
+preservation is essential to understanding the poet’s suicidal ideation: he does not conceive 
+of his death as a destruction; it is an act of preservation in a narrative of melancholic 
+resistance. The poet imagines his death not as an absence, but as a space of potential being. 
+Reluctance by critics to account for the speaker’s suicidal ideation completely disfigures the 
+text, eliding the elegy’s ethical valence. Readings of Adonais are at their best when they attend 
+to the desire and the melancholy which operate at the heart of the text.  
+The third chapter, “‘Dark Secrets Look for Light’ or Fragments Making Knowledge 
+in the Poetry of Keats” is the first of two in which I explore the role of melancholia in the 
+poetry of John Keats.6 I have structured the chapters around two key insights of the poet: 
+his turn away from aesthetic ideology and his recognition of his melancholia as productive. 
+In this first chapter I chart the poet’s struggle to understand the origins of his melancholia 
+and its perpetuation through three texts: “On Seeing the Elgin Marbles,” “Epistle to John 
+Reynolds,” and “Ode on a Grecian Urn.” While the “Ode on a Grecian Urn” is generally 
+read by scholars through the frame of the other 1819 Odes, I situate it here to emphasize the 
+poet’s dependence upon, then liberation from, aesthetic ideology. I further argue that the 
+poet perceives his melancholia as caused by this ideology and his inability to succeed at his 
+literary calling—poetry.  
+While I cite the work of Theodor Adorno and Walter Benjamin throughout my 
+dissertation, it is important to distinguish this work from my reading of aesthetic ideology in 
+Keats’ poetry, which, as Kaufman notes, is often conflated with the work of Adorno and the 
+Frankfurt School in general. My critique of aesthetic ideology adheres to the features 
+Kaufman defines in the following way: 
+ 
+ 
+ 
+ 
+ 
+ 
+ PREVIEW
+ Bishop 16 
+ 
+The critique of aesthetic ideology holds that high romantic poetics and Kantian 
+aesthetics--building on eighteenth-century advances in bourgeois sociopolitical 
+power—establish an essentialist or transcendental theory of cultural value. This is 
+said to be an ideological theory whose function, enacted practically through 
+literary/aesthetic experience and form, is to serve bourgeois hegemony by rerouting 
+attention, interest, and energy from the sociopolitical to the artistic-cultural realm. 
+(354)7 
+Thus, aesthetic ideology operates as a social control which seeks to repress the 
+transformative power inherent in aesthetic experience by delimiting it too narrowly. I deploy 
+this concept in order to elaborate how Keats the poet is adversely influenced by the 
+essentialist cultural mores which seek to minimize his divergent aesthetic experiences in the 
+Elgin Marbles sonnet, the “Epistle to John Hamilton Reynolds,” and “Ode on a Grecian 
+Urn.”  
+I open the chapter with a reading of “Torso” from Walter Benjamin’s book One-Way 
+Street as a way to frame the Keats’ attempt to move beyond aesthetic ideology through 
+poetry. Benjamin compares a damaged fragment of a sculpture to the fragmentary nature of 
+subjectivity, memory and history. Benjamin suggests a paradoxical construction: only by 
+assuming that one’s past is an artificial figure without meaning, may s/he find the ability to 
+“use it to full advantage in the present” and seek redemption (EBS 46).  The image of the 
+damaged torso is a powerful figure for Keats’ own struggle in these lyrics to overcome the 
+narrative artifice of the ideologies which burden him. In witnessing the mutilated bodies of 
+the Elgin Marbles, the poet is confronted with a reminder of his own finite powers in the 
+face of an artistic perfection at which he seems doomed to fail. The “Elgin” lyric 
+communicates two lines of inquiry, neither of which the poet can resolve satisfactorily—the 

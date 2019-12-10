@@ -11,13 +11,14 @@ void MyLinkList::storeWordsInList()
 		cout << "读取失败" << endl;//处理异常
 	}
 	char words[MAXLEN];
+	string tmpString;
 	while (textFile.getline(words, MAXLEN))
 	{
-		getWordsInLine(words);
+		getWordsInLine(words,tmpString);
 	}
 	textFile.close();
 }
-void MyLinkList::storeWordsInOutFile_1()
+void MyLinkList::storeWordsInOutFile()
 {
 	MyLinkList wordsInOrder;
 	wordsInOrder = *this;
@@ -38,15 +39,16 @@ void MyLinkList::storeWordsInOutFile_1()
 	}
 	outFile.close();
 }
-void MyLinkList::getWordsInLine(char *str)
+void MyLinkList::getWordsInLine(char *str,string &tmpString)
 {
-	string tmpString;
+	if (tmpString == "-") tmpString.clear();
 	for (int i = 0;i < strlen(str);++i)
 	{
-		if (isalpha(str[i]) || str[i] == '-' || str[i] == 39) {
+		if (isalpha(static_cast<unsigned char>(str[i])) || str[i] == '-' || str[i] == 39) {
+			if (tmpString == "-") tmpString.clear();
 			tmpString += tolower(str[i]);
 		}
-		else if (!tmpString.empty()) {
+		else if (!tmpString.empty() && tmpString[tmpString.length() - 1] != '-') {
 			if (!findWordInOrder(tmpString, 0)) {
 				tailInsert(tmpString);
 			}
@@ -105,4 +107,30 @@ MyLinkList& MyLinkList::operator=(MyLinkList &tmpList)
 		copyPtr = copyPtr->next;
 	}
 	return *this;
+}
+void MyLinkList::wordsFilter(int filterVal)
+{
+	Node *ptr = head,*prePtr=NULL;
+	while (ptr != NULL)
+	{
+		if (ptr->data.getCount() <= filterVal) {
+			if (prePtr != NULL) {
+				prePtr->next = ptr->next;
+			}
+			Node *delPtr = ptr;
+			if (delPtr == head) {
+				head = delPtr->next;
+			}
+			else if (delPtr == tail) {
+				tail = NULL;
+			}
+			ptr = ptr->next;
+			delete delPtr;
+			totWord--;
+		}
+		else {
+			prePtr = ptr;
+			ptr = ptr->next;
+		}
+	}
 }

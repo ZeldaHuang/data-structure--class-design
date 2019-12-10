@@ -13,16 +13,18 @@ public:
 
 	bool findWordInOrder(string searchStr,bool isInsearchFunction);//查找单词，功能型查找/内置
 
-	void storeWordsInOutFile_1();//词频统计字典序输出至文件
+	void storeWordsInOutFile();//词频统计字典序输出至文件
 
 	bool binarysSearch(string searchStr);
+
+	void wordsFilter(int filterVal);
 
 	~MyArray() {};
 private:
 	MyWord wordsArray[MAXLEN];
 	int totWord;
 	bool isBinarySearch;
-	void getWordsInLine(char *str);
+	void getWordsInLine(char *str, string &tmpString);
 };
 
 
@@ -43,9 +45,11 @@ public:
 
 	bool findWordInOrder(string searchStr, bool isInsearchFunction);
 
-	void storeWordsInOutFile_1();
+	void storeWordsInOutFile();
 
 	MyLinkList& operator=(MyLinkList &tmpList);
+
+	void wordsFilter(int filterVal);
 
 	~MyLinkList() {
 		Node *ptr = head;
@@ -59,7 +63,7 @@ private:
 	int totWord;
 	Node *head;
 	Node *tail;
-	void getWordsInLine(char *str);
+	void getWordsInLine(char *str, string &tmpString);
 	void tailInsert(string s);
 };
 

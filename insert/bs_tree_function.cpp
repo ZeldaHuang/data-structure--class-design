@@ -12,22 +12,23 @@ void MyBSTree::storeWordsInTree()
 		cout << "读取失败" << endl;//处理异常
 	}
 	char words[MAXLEN];
+	string tmpString;
 	while (textFile.getline(words, MAXLEN))
 	{
-		getWordsInLine(words);
+		getWordsInLine(words,tmpString);
 	}
 	textFile.close();
 }
-
-void MyBSTree::getWordsInLine(char *str)
+void MyBSTree::getWordsInLine(char *str, string &tmpString)
 {
-	string tmpString;
+	if (tmpString == "-") tmpString.clear();
 	for (int i = 0;i < strlen(str);++i)
 	{
-		if (isalpha(str[i]) || str[i] == '-' || str[i] == 39) {
+		if (isalpha(static_cast<unsigned char>(str[i])) || str[i] == '-' || str[i] == 39) {
+			if (tmpString == "-") tmpString.clear();
 			tmpString += tolower(str[i]);
 		}
-		else if (!tmpString.empty()) {
+		else if (!tmpString.empty() && tmpString[tmpString.length() - 1] != '-') {
 			if (!findWordInTree(tmpString, 0,root)) {
 				locatePosInTree(tmpString,root);
 				totWord++;
@@ -111,4 +112,12 @@ void MyBSTree::destroyTree(BiNode *ptr)
 		destroyTree(ptr->rchild);
 	}
 	delete ptr;
+}
+
+void MyBSTree::wordsFilter(BiNode *ptr,BiNode *faPtr,int filterNum)
+{
+	if (ptr == NULL) return;
+	wordsFilter(ptr->lchild,ptr,filterNum);
+	wordsFilter(ptr->rchild, ptr,filterNum);
+	if (ptr->data.getCount() <= filterNum);
 }

@@ -13,11 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="源文件\线性表_顺序存储">
-      <UniqueIdentifier>{d7fa5124-3111-4b8b-86a2-c4454d0e81e5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\二叉排序树存储">
       <UniqueIdentifier>{a628336b-bd16-4739-a2d3-692175cfdecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\线性表%28顺序表和链表%29存储">
+      <UniqueIdentifier>{d7fa5124-3111-4b8b-86a2-c4454d0e81e5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -28,13 +28,13 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="array_funcion.cpp">
-      <Filter>源文件\线性表_顺序存储</Filter>
+      <Filter>源文件\线性表%28顺序表和链表%29存储</Filter>
     </ClCompile>
     <ClCompile Include="bs_tree_function.cpp">
       <Filter>源文件\二叉排序树存储</Filter>
     </ClCompile>
     <ClCompile Include="list_funcion.cpp">
-      <Filter>源文件\线性表_顺序存储</Filter>
+      <Filter>源文件\线性表%28顺序表和链表%29存储</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -12,21 +12,18 @@ void MyArray::storeWordsInArray()
 		cout << "读取失败" << endl;//处理异常
 	}
 	char words[MAXLEN];
+	string tmpString;
 	while (textFile.getline(words, MAXLEN))
 	{
-		getWordsInLine(words);
+		getWordsInLine(words,tmpString);
 	}
 	if (isBinarySearch) {
 		quickSort(wordsArray, 1, totWord);
-		for (int i = 1;i <= totWord;++i)
-		{
-			cout << wordsArray[i].getWord() << " " << wordsArray[i].getCount() << endl;
-		}
 	}
 	textFile.close();
 }
 
-void MyArray::storeWordsInOutFile_1()
+void MyArray::storeWordsInOutFile()
 {
 	MyWord wordsInOrder[MAXLEN];
 	for (int i = 1;i <= totWord;++i) {
@@ -51,16 +48,16 @@ void MyArray::storeWordsInOutFile_1()
 	}
 	outFile.close();
 }
-
-void MyArray::getWordsInLine(char *str)
+void MyArray::getWordsInLine(char *str,string &tmpString)
 {
-	string tmpString;
+	if (tmpString == "-") tmpString.clear();
 	for (int i = 0;i < strlen(str);++i)
 	{
-		if (isalpha(str[i]) || str[i] == '-' || str[i] == 39) {
+		if (isalpha(static_cast<unsigned char>(str[i])) || str[i] == '-' || str[i] == 39) {
+			if (tmpString == "-") tmpString.clear();
 			tmpString += tolower(str[i]);
 		}
-		else if(!tmpString.empty()){
+		else if(!tmpString.empty() && tmpString[tmpString.length()-1]!='-'){
 			if (!findWordInOrder(tmpString,0)) {
 				wordsArray[++totWord] = MyWord(tmpString);
 			}
@@ -99,4 +96,19 @@ bool MyArray::binarysSearch(string searchStr)
 		}
 	}
 	return false;
+}
+
+void MyArray::wordsFilter(int filterVal)
+{
+	for (int i = 1;i <= totWord;)
+	{
+		if (wordsArray[i].getCount() <= filterVal) {
+			for (int j = i;j < totWord;++j) {
+				wordsArray[j] = wordsArray[j + 1];
+			}
+			wordsArray[totWord] = MyWord();
+			totWord--;
+		}
+		else i++;
+	}
 }
