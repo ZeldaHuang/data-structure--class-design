@@ -21,7 +21,7 @@ void MyLinkList::storeWordsInOutFile_1()
 {
 	MyLinkList wordsInOrder;
 	wordsInOrder = *this;
-	node *sortHead=wordsInOrder.getHead();
+	Node *sortHead=wordsInOrder.getHead();
 	sortHead=sortList(sortHead);
 	fstream outFile;
 	outFile.open("OutFile2.txt", ios::out);
@@ -32,7 +32,7 @@ void MyLinkList::storeWordsInOutFile_1()
 	outFile << totWord << endl;
 	while (sortHead != NULL)
 	{
-		cout << sortHead->data.getWord() <<" " <<sortHead->data.getCount() << endl;
+		//cout << sortHead->data.getWord() <<" " <<sortHead->data.getCount() << endl;
 		outFile << sortHead->data.getWord() << " " << sortHead->data.getCount() << endl;
 		sortHead = sortHead->next;
 	}
@@ -57,7 +57,7 @@ void MyLinkList::getWordsInLine(char *str)
 }
 void MyLinkList::tailInsert(string insertStr)//尾插法插入数据
 {
-	node *insertPtr = new node;
+	Node *insertPtr = new Node;
 	insertPtr->data = MyWord(insertStr);
 	insertPtr->next = NULL;
 	totWord++;
@@ -72,7 +72,7 @@ void MyLinkList::tailInsert(string insertStr)//尾插法插入数据
 
 bool MyLinkList::findWordInOrder(string searchStr, bool isInsearchFunction)
 {
-	node *findPtr = head;
+	Node *findPtr = head;
 	while (findPtr != NULL)
 	{
 		if (findPtr->data.getWord() == searchStr) {
@@ -88,10 +88,10 @@ bool MyLinkList::findWordInOrder(string searchStr, bool isInsearchFunction)
 
 MyLinkList& MyLinkList::operator=(MyLinkList &tmpList)
 {
-	node *copyPtr = tmpList.head;
+	Node *copyPtr = tmpList.head;
 	while (!copyPtr == NULL)
 	{
-		node *ptr = new node;
+		Node *ptr = new Node;
 		ptr->data = copyPtr->data;
 		ptr->next = NULL;
 		totWord++;

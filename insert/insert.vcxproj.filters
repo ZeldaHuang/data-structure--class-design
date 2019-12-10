@@ -16,25 +16,28 @@
     <Filter Include="源文件\线性表_顺序存储">
       <UniqueIdentifier>{d7fa5124-3111-4b8b-86a2-c4454d0e81e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\二叉排序树存储">
+      <UniqueIdentifier>{a628336b-bd16-4739-a2d3-692175cfdecb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="wordFrequenceCount_withArray.cpp">
-      <Filter>源文件\线性表_顺序存储</Filter>
-    </ClCompile>
     <ClCompile Include="Sort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="wordFrequenceCount_withList.cpp">
+    <ClCompile Include="array_funcion.cpp">
+      <Filter>源文件\线性表_顺序存储</Filter>
+    </ClCompile>
+    <ClCompile Include="bs_tree_function.cpp">
+      <Filter>源文件\二叉排序树存储</Filter>
+    </ClCompile>
+    <ClCompile Include="list_funcion.cpp">
       <Filter>源文件\线性表_顺序存储</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Sort.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -42,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Word.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BSTree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

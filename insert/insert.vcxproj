@@ -118,12 +118,13 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Sort.cpp" />
-    <ClCompile Include="wordFrequenceCount_withArray.cpp" />
-    <ClCompile Include="wordFrequenceCount_withList.cpp" />
+    <ClCompile Include="bs_tree_function.cpp" />
+    <ClCompile Include="array_funcion.cpp" />
+    <ClCompile Include="list_funcion.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BSTree.h" />
     <ClInclude Include="Word.h" />
-    <ClInclude Include="resource.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="linearList.h" />
   </ItemGroup>

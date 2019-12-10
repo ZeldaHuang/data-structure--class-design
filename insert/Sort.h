@@ -5,8 +5,8 @@
 #include"linearList.h"
 void quickSort(MyWord *wordsArray, int low, int high);
 
-node *sortList(node *head);
-node *mergeList(node *head1, node *head2);
+Node *sortList(Node *head);
+Node *mergeList(Node *head1, Node *head2);
 
 #endif // !SORT_H
 

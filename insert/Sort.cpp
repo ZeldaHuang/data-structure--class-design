@@ -23,12 +23,12 @@ void quickSort(MyWord *wordsArray, int low, int high)
 	return;
 }
 
-node *sortList(node *head)
+Node *sortList(Node *head)
 {
 	if (head == NULL || head->next == NULL) {
 		return head;
 	}
-	node *fast = head, *slow = head;
+	Node *fast = head, *slow = head;
 	while (fast->next != NULL && fast->next->next != NULL)//快慢指针找到中间节点
 	{
 		fast = fast->next->next;
@@ -36,12 +36,12 @@ node *sortList(node *head)
 	}
 	fast = slow;
 	slow = slow->next;
-	fast->next = NULL;//分割链表
+	fast->next = NULL;//以中间节点分割链表
 	fast=sortList(head);
 	slow = sortList(slow);
 	return mergeList(fast, slow);
 }
-node *mergeList(node *head1, node *head2)
+Node *mergeList(Node *head1, Node *head2)//合并链表
 {
 	if (head1 == NULL) {
 		return head2;
@@ -49,7 +49,7 @@ node *mergeList(node *head1, node *head2)
 	if (head2 == NULL) {
 		return head1;
 	}
-	node *res, *ptr;//res为合并链表后的头节点
+	Node *res, *ptr;//res为合并链表后的头节点
 	if (head1->data < head2->data) {
 		res = head1;
 		head1 = head1->next;
