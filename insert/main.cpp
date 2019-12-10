@@ -16,6 +16,11 @@ int main()
 		ojb2.storeWordsInArray();
 		ojb2.storeWordsInOutFile_1();
 	}
+	else {
+		MyLinkList l;
+		l.storeWordsInList();
+		l.storeWordsInOutFile_1();
+	}
 	getchar();
 	getchar();
 	return 0;

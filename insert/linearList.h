@@ -1,8 +1,6 @@
 #pragma once
 #ifndef LINEARLIST_H
 #define LINEARLIST_H
-#include<iostream>
-#include<string>
 #include"Word.h"
 #define MAXLEN 5000
 //用顺序表进行词频统计和顺序查找或二分查找
@@ -17,6 +15,8 @@ public:
 
 	void storeWordsInOutFile_1();//词频统计字典序输出至文件
 
+	bool binarysSearch(string searchStr);
+
 	~MyArray() {};
 private:
 	MyWord wordsArray[MAXLEN];
@@ -27,6 +27,40 @@ private:
 
 
 //用链表进行词频统计和顺序查找
+struct Node{//链表节点
+	MyWord data;
+	Node *next;
+};
 
+class MyLinkList
+{
+public:
+	MyLinkList() :head(NULL), tail(NULL), totWord(0) {}
+
+	Node *getHead() { return head; }
+
+	void storeWordsInList();//将单词从InFILE中读入数组
+
+	bool findWordInOrder(string searchStr, bool isInsearchFunction);
+
+	void storeWordsInOutFile_1();
+
+	MyLinkList& operator=(MyLinkList &tmpList);
+
+	~MyLinkList() {
+		Node *ptr = head;
+		while (!ptr == NULL) {
+			Node *delPtr = ptr;
+			ptr = ptr->next;
+			delete delPtr;
+		}
+	}
+private:
+	int totWord;
+	Node *head;
+	Node *tail;
+	void getWordsInLine(char *str);
+	void tailInsert(string s);
+};
 
 #endif

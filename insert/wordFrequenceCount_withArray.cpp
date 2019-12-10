@@ -17,7 +17,7 @@ void MyArray::storeWordsInArray()
 		getWordsInLine(words);
 	}
 	if (isBinarySearch) {
-		mergeSort(wordsArray, 1, totWord);
+		quickSort(wordsArray, 1, totWord);
 		for (int i = 1;i <= totWord;++i)
 		{
 			cout << wordsArray[i].getWord() << " " << wordsArray[i].getCount() << endl;
@@ -32,7 +32,7 @@ void MyArray::storeWordsInOutFile_1()
 	for (int i = 1;i <= totWord;++i) {
 		wordsInOrder[i] = wordsArray[i];
 	}
-	mergeSort(wordsInOrder, 1, totWord);
+	quickSort(wordsInOrder, 1, totWord);
 	fstream outFile;
 	if (isBinarySearch) {//判断是否为二分查找下的词频统计
 		outFile.open("OutFile3.txt", ios::out);
@@ -58,7 +58,7 @@ void MyArray::getWordsInLine(char *str)
 	for (int i = 0;i < strlen(str);++i)
 	{
 		if (isalpha(str[i]) || str[i] == '-' || str[i] == 39) {
-			tmpString += str[i];
+			tmpString += tolower(str[i]);
 		}
 		else if(!tmpString.empty()){
 			if (!findWordInOrder(tmpString,0)) {
@@ -76,8 +76,27 @@ bool MyArray::findWordInOrder(string searchStr, bool isInsearchFunction)
 	{
 		if (wordsArray[i].getWord() == searchStr) {
 			if (!isInsearchFunction) wordsArray[i].addCount();
-			return 1;
+			return true;
 		}
 	}
-	return 0;
+	return false;
+}
+
+bool MyArray::binarysSearch(string searchStr)
+{
+	int low = 1, high = totWord;
+	while (low <= high)
+	{
+		int mid = (low + high) >> 1;
+		if (wordsArray[mid].getWord() == searchStr) {
+			return true;
+		}
+		else if (wordsArray[mid].getWord() < searchStr) {
+			low = mid + 1;
+		}
+		else {
+			high = mid - 1;
+		}
+	}
+	return false;
 }

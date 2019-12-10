@@ -33,11 +33,16 @@ public:
 	{
 		count++;
 	}
-	void operator =(MyWord tmp)
-	{
+	MyWord& operator =(MyWord tmp){
 		word = tmp.word;
 		count = tmp.count;
-		return;
+		return *this;
+	}
+	bool operator<(MyWord& tmp) {
+		return word < tmp.getWord();
+	}
+	bool operator>=(MyWord& tmp) {
+		return word >= tmp.getWord();
 	}
 	~MyWord(){}
 };
