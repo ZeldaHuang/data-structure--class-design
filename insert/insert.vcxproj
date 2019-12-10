@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{323E1349-8BE1-4FB2-9B79-54CD9015D87C}</ProjectGuid>
-    <RootNamespace>insert</RootNamespace>
+    <RootNamespace>test</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectName>test</ProjectName>
   </PropertyGroup>
@@ -122,7 +122,7 @@
     <ClCompile Include="wordFrequenceCount_withList.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Class.h" />
+    <ClInclude Include="Word.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="linearList.h" />

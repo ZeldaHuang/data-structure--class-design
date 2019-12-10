@@ -1,6 +1,6 @@
 #include<iostream>
 #include"linearList.h"
-#include"Class.h"
+#include"Word.h"
 #define MAXLEN 5000
 using namespace std;
 
@@ -16,5 +16,7 @@ int main()
 		ojb2.storeWordsInArray();
 		ojb2.storeWordsInOutFile_1();
 	}
+	getchar();
+	getchar();
 	return 0;
 }

@@ -3,7 +3,7 @@
 #define LINEARLIST_H
 #include<iostream>
 #include<string>
-#include"Class.h"
+#include"Word.h"
 #define MAXLEN 5000
 //用顺序表进行词频统计和顺序查找或二分查找
 class MyArray:protected MyWord

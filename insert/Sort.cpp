@@ -1,4 +1,4 @@
-#include"Class.h"
+#include"Word.h"
 #include"linearList.h"
 #include"Sort.h"
 using namespace std;

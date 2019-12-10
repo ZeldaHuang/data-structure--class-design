@@ -1,7 +1,7 @@
 
-#ifndef CLASS_H
+#ifndef WORD_H
 
-#define CLASS_H
+#define WORD_H
 
 #include<string>
 #include<iostream>
@@ -41,4 +41,4 @@ public:
 	}
 	~MyWord(){}
 };
-#endif //CLASS_H
+#endif //WORD_H

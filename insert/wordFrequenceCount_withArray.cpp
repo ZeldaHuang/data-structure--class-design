@@ -1,7 +1,7 @@
 #include<fstream>
 #include"linearList.h"
 #include"Sort.h"
-#include"class.h"
+#include"Word.h"
 using namespace std;
 
 void MyArray::storeWordsInArray()
