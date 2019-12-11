@@ -19,6 +19,9 @@
     <Filter Include="源文件\线性表%28顺序表和链表%29存储">
       <UniqueIdentifier>{d7fa5124-3111-4b8b-86a2-c4454d0e81e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\哈希表存储">
+      <UniqueIdentifier>{d84cd967-22e6-452c-a6dd-81a914fce621}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -36,6 +39,12 @@
     <ClCompile Include="list_funcion.cpp">
       <Filter>源文件\线性表%28顺序表和链表%29存储</Filter>
     </ClCompile>
+    <ClCompile Include="hash_map_function%28list%29.cpp">
+      <Filter>源文件\哈希表存储</Filter>
+    </ClCompile>
+    <ClCompile Include="hash_map_function%28array%29.cpp">
+      <Filter>源文件\哈希表存储</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sort.h">
@@ -48,6 +57,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="BSTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HashMap.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

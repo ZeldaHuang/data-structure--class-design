@@ -13,7 +13,7 @@ protected:
 public:
 	MyWord()
 	{
-		word = "&&&";
+		word = "&null_word&";
 		count = 1;
 	}
 	MyWord(string s)

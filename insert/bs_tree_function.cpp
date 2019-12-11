@@ -2,7 +2,6 @@
 #include"Word.h"
 #include"BSTree.h"
 #include"Sort.h"
-#define MAXLEN 5000
 
 void MyBSTree::storeWordsInTree()
 {

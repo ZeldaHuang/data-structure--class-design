@@ -4,7 +4,7 @@
 #include"Word.h"
 #define MAXLEN 5000
 //用顺序表进行词频统计和顺序查找或二分查找
-class MyArray:protected MyWord
+class MyArray
 {
 public:
 	MyArray(bool judge):isBinarySearch(judge),totWord(0){}
@@ -32,6 +32,9 @@ private:
 struct Node{//链表节点
 	MyWord data;
 	Node *next;
+	Node() {
+		next = NULL;
+	}
 };
 
 class MyLinkList

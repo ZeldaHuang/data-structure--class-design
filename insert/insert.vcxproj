@@ -121,9 +121,12 @@
     <ClCompile Include="bs_tree_function.cpp" />
     <ClCompile Include="array_funcion.cpp" />
     <ClCompile Include="list_funcion.cpp" />
+    <ClCompile Include="hash_map_function%28list%29.cpp" />
+    <ClCompile Include="hash_map_function%28array%29.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BSTree.h" />
+    <ClInclude Include="HashMap.h" />
     <ClInclude Include="Word.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="linearList.h" />

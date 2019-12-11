@@ -5,6 +5,7 @@
 #include"linearList.h"
 #include"Word.h"
 #include"BSTree.h"
+#include"HashMap.h"
 #define MAXLEN 5000
 
 int main()
@@ -44,24 +45,10 @@ int main()
 	else cout << "没找到" << endl;
 	finish = clock();
 	cout << "花费时间：" << (finish - start)  << endl;*/
-	MyArray a1(0);
-	MyArray a2(1);
-	MyLinkList l;
-	MyBSTree t;
-	a2.storeWordsInArray();
-	a1.storeWordsInArray();
-	l.storeWordsInList();
-	t.storeWordsInTree();
-
-	a1.wordsFilter(10);
-	a2.wordsFilter(10);
-	l.wordsFilter(10);
-	t.wordsFilter(t.getRoot(), NULL, 10);
-
-	a1.storeWordsInOutFile();
-	a2.storeWordsInOutFile();
-	l.storeWordsInOutFile();
-	t.storeWordsInOutFile();
+	MyHashMap_StoreWithLinkList m1;
+	m1.storeWordsInHashMap();
+	m1.wordsFilter(10);
+	m1.storeWordsInOutFile();
 	getchar();
 	getchar();
 	return 0;
