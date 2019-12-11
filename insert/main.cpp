@@ -51,9 +51,13 @@ int main()
 	a2.storeWordsInArray();
 	a1.storeWordsInArray();
 	l.storeWordsInList();
+	t.storeWordsInTree();
+
 	a1.wordsFilter(10);
 	a2.wordsFilter(10);
 	l.wordsFilter(10);
+	t.wordsFilter(t.getRoot(), NULL, 10);
+
 	a1.storeWordsInOutFile();
 	a2.storeWordsInOutFile();
 	l.storeWordsInOutFile();
