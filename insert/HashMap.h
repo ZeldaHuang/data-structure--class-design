@@ -48,7 +48,7 @@ private:
 class MyHashMap_StoreWithArray
 {
 public:
-	MyHashMap_StoreWithArray():totWord(0){}
+	MyHashMap_StoreWithArray() :totWord(0) { memset(isExist, 0, sizeof(isExist)); }
 
 	void storeWordsInHashMap();
 	bool findWordInHashMap(string searchStr, bool isInsearchFunction, int &pos);
@@ -57,10 +57,11 @@ public:
 
 private:
 	MyWord hashElems[MAXLEN];
+	bool isExist[MAXLEN];
 	int totWord;
-	void insertWordInHashMap(string &str);
 	int hash(string key); //hash函数的一种(取模法)  
 	void getWordsInLine(char *str, string &tmpString);
+	void Collision(int &p);
 };
 
 #endif // !HASHMAP_H

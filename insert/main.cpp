@@ -45,10 +45,10 @@ int main()
 	else cout << "没找到" << endl;
 	finish = clock();
 	cout << "花费时间：" << (finish - start)  << endl;*/
-	MyHashMap_StoreWithLinkList m1;
-	m1.storeWordsInHashMap();
-	m1.wordsFilter(10);
-	m1.storeWordsInOutFile();
+	MyHashMap_StoreWithArray m2;
+	m2.storeWordsInHashMap();
+	m2.wordsFilter(10);
+	m2.storeWordsInOutFile();
 	getchar();
 	getchar();
 	return 0;
