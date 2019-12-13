@@ -3,6 +3,7 @@
 #include"HashMap.h"
 #include"linearList.h"
 #include"Sort.h"
+#define HASHMAXLEN 3079//定义哈希表长为素数减少冲突
 
 void MyHashMap_StoreWithLinkList::storeWordsInHashMap()
 {
@@ -11,9 +12,9 @@ void MyHashMap_StoreWithLinkList::storeWordsInHashMap()
 	if (!textFile) {
 		cout << "读取失败" << endl;//处理异常
 	}
-	char words[MAXLEN];
+	char words[HASHMAXLEN];
 	string tmpString;
-	while (textFile.getline(words, MAXLEN))
+	while (textFile.getline(words, HASHMAXLEN))
 	{
 		getWordsInLine(words, tmpString);
 	}
@@ -28,13 +29,13 @@ void MyHashMap_StoreWithLinkList::storeWordsInOutFile()
 		return;
 	}
 	outFile << totWord << endl;
-	MyHashMap_StoreWithLinkList sortedHashMap = *this;
+	/*MyHashMap_StoreWithLinkList sortedHashMap = *this;//归并
 	sortedHashMap.totWord = totWord;
-	for (int i = 0;i < MAXLEN;++i)
+	for (int i = 0;i < HASHMAXLEN;++i)
 	{
 		sortedHashMap.hashElems[i].head=sortList(sortedHashMap.hashElems[i].head);
 	}
-	for (int i = 1;i < MAXLEN;++i)
+	for (int i = 1;i < HASHMAXLEN;++i)
 	{
 		sortedHashMap.hashElems[0].head=mergeList(sortedHashMap.hashElems[0].head, sortedHashMap.hashElems[i].head);
 	}
@@ -43,6 +44,22 @@ void MyHashMap_StoreWithLinkList::storeWordsInOutFile()
 	{
 		outFile << ptr->data.getWord() << " " << ptr->data.getCount() << endl;
 		ptr = ptr->next;
+	}*/
+	MyWord tmpa[MAXLEN];
+	int tot = 0;
+	for (int i = 0;i < MAXLEN;++i)
+	{
+		Node *ptr = hashElems[i].head;
+		while (ptr != NULL)
+		{
+			tmpa[++tot] = ptr->data;
+			ptr = ptr->next;
+		}
+	}
+	quickSort(tmpa, 1, tot);
+	for (int i = 1;i <= tot;++i)
+	{
+		outFile << tmpa[i].getWord() << " " << tmpa[i].getCount() << endl;
 	}
 	outFile.close();
 }
@@ -56,7 +73,8 @@ void MyHashMap_StoreWithLinkList::getWordsInLine(char *str, string &tmpString)
 			tmpString += tolower(str[i]);
 		}
 		else if (!tmpString.empty() && tmpString[tmpString.length() - 1] != '-') {
-			if (!findWordInHashMap(tmpString, 0)) {
+			int cnt = 0;
+			if (!findWordInHashMap(tmpString, 0,cnt)) {
 				insertWordInHashMap(tmpString);
 				totWord++;
 			}
@@ -65,7 +83,6 @@ void MyHashMap_StoreWithLinkList::getWordsInLine(char *str, string &tmpString)
 	}
 	return;
 }
-
 void MyHashMap_StoreWithLinkList::insertWordInHashMap(string &
 	str)//头插法
 {
@@ -76,35 +93,36 @@ void MyHashMap_StoreWithLinkList::insertWordInHashMap(string &
 	insertPtr->next = hashElems[pos].head;
 	hashElems[pos].head = insertPtr;
 }
-bool MyHashMap_StoreWithLinkList::findWordInHashMap(string searchStr, bool isInsearchFunction)
+int MyHashMap_StoreWithLinkList::findWordInHashMap(string searchStr, bool isInsearchFunction,int &findCnt)
 {
 	int pos = hash(searchStr);
 	Node *searchPtr = hashElems[pos].head;
 	while (searchPtr!=NULL)
 	{
+		findCnt++;
 		if (searchPtr->data.getWord() == searchStr) {
 			if (!isInsearchFunction) {
 				searchPtr->data.addCount();
 			}
-			return true;
+			return searchPtr->data.getCount();
 		}
 		searchPtr = searchPtr->next;
 	}
-	return false;
+	return 0;
 }
 int MyHashMap_StoreWithLinkList::hash(string key)
 {
-	int kNum = 0;
+	long long kNum = 0;
+	long long  seed = 3;
 	for (int i = 0;i < key.length();++i)
 	{
-		kNum += key[i];
+		kNum = kNum * seed + key[i];
 	}
-	return kNum % MAXLEN;
+	return kNum % HASHMAXLEN;
 }
-
 MyHashMap_StoreWithLinkList& MyHashMap_StoreWithLinkList::operator=(MyHashMap_StoreWithLinkList &tmpHashMap)
 {
-	for (int i = 0;i < MAXLEN;++i)
+	for (int i = 0;i < HASHMAXLEN;++i)
 	{
 		hashElems[i].length = tmpHashMap.hashElems[i].length;
 		Node *ptr = tmpHashMap.hashElems[i].head;
@@ -121,7 +139,7 @@ MyHashMap_StoreWithLinkList& MyHashMap_StoreWithLinkList::operator=(MyHashMap_St
 }
 void MyHashMap_StoreWithLinkList::wordsFilter(int filterVal)
 {
-	for (int i = 0;i < MAXLEN;++i)
+	for (int i = 0;i < HASHMAXLEN;++i)
 	{
 		Node *ptr = hashElems[i].head;
 		Node *prePtr = NULL;

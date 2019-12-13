@@ -3,6 +3,7 @@
 #include<Windows.h>
 #include<iomanip>
 #include"linearList.h"
+#include"pages.h"
 #include"Word.h"
 #include"BSTree.h"
 #include"HashMap.h"
@@ -10,46 +11,7 @@
 
 int main()
 {	
-	/*string s;
-	clock_t start, finish;
-	cin >> s;
-	cout << "顺序表顺序查找：" << endl;
-	MyArray a1(0);
-	start = clock();
-	a1.storeWordsInArray();
-	if (a1.findWordInOrder(s, 1)) cout << "找到拉" << endl;
-	else cout << "没找到" << endl;
-	finish = clock();
-	cout << "花费时间：" << (finish - start) << endl;
-	cout << "顺序表二分查找：" << endl;
-	MyArray a2(1);
-	start = clock();
-	a2.storeWordsInArray();
-	if (a2.binarysSearch(s)) cout << "找到拉" << endl;
-	else cout << "没找到" << endl;
-	finish = clock();
-	cout << "花费时间：" << (finish - start)<< endl;
-	cout << "链表查找：" << endl;
-	MyLinkList l;
-	start = clock();
-	l.storeWordsInList();
-	if(l.findWordInOrder(s,1))cout << "找到拉" << endl;
-	else cout << "没找到" << endl;
-	finish = clock();
-	cout << "花费时间：" << (finish - start)  << endl;
-	cout << "二叉排序树查找：" << endl;
-	MyBSTree t;
-	start = clock();
-	t.storeWordsInTree();
-	if (t.findWordInTree(s, 1, t.getRoot()))cout << "找到拉" << endl;
-	else cout << "没找到" << endl;
-	finish = clock();
-	cout << "花费时间：" << (finish - start)  << endl;*/
-	MyHashMap_StoreWithArray m2;
-	m2.storeWordsInHashMap();
-	m2.wordsFilter(10);
-	m2.storeWordsInOutFile();
-	getchar();
-	getchar();
+	MyPages myPage;
+	myPage.buildMainPage();
 	return 0;
 }

@@ -18,7 +18,7 @@ public:
 
 	MyHashMap_StoreWithLinkList():totWord(0){}
 	void storeWordsInHashMap();
-	bool findWordInHashMap(string searchStr, bool isInsearchFunction);
+	int findWordInHashMap(string searchStr, bool isInsearchFunction,int &findCnt);
 	void storeWordsInOutFile();
 	void wordsFilter(int filterVal);
 	MyHashMap_StoreWithLinkList& operator=(MyHashMap_StoreWithLinkList &tmpHashMap);
@@ -51,7 +51,7 @@ public:
 	MyHashMap_StoreWithArray() :totWord(0) { memset(isExist, 0, sizeof(isExist)); }
 
 	void storeWordsInHashMap();
-	bool findWordInHashMap(string searchStr, bool isInsearchFunction, int &pos);
+	int findWordInHashMap(string searchStr, bool isInsearchFunction, int &pos,int &findCnt);
 	void storeWordsInOutFile();
 	void wordsFilter(int filterVal);
 

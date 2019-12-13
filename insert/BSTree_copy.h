@@ -17,7 +17,7 @@ public:
 
 	void storeWordsInTree();
 
-	int findWordInTree(string &searchStr, bool isInsearchFunction,BiNode *ptr,int &cnt);
+	bool findWordInTree(string &searchStr, bool isInsearchFunction,BiNode *ptr);
 
 	void storeWordsInOutFile();
 

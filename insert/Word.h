@@ -1,10 +1,11 @@
-
+#pragma once
 #ifndef WORD_H
 
 #define WORD_H
 
 #include<string>
 #include<iostream>
+#include<cstring>
 using namespace std;
 class MyWord {
 protected:

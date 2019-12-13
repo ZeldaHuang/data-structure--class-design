@@ -7,19 +7,21 @@
 class MyArray
 {
 public:
-	MyArray(bool judge):isBinarySearch(judge),totWord(0){}
+    MyArray():totWord(0),isBinarySearch(0){}
 
 	void storeWordsInArray();//将单词从InFILE中读入数组
 
-	bool findWordInOrder(string searchStr,bool isInsearchFunction);//查找单词，功能型查找/内置
+	int findWordInOrder(string searchStr,bool isInsearchFunction,int &findcnt);//查找单词，功能型查找/内置
 
 	void storeWordsInOutFile();//词频统计字典序输出至文件
 
-	bool binarysSearch(string searchStr);
+	int binarysSearch(string searchStr,int &cnt);
 
 	void wordsFilter(int filterVal);
 
-	~MyArray() {};
+    void binarysSearchMode(){isBinarySearch=1;}
+
+    ~MyArray() {}
 private:
 	MyWord wordsArray[MAXLEN];
 	int totWord;
@@ -46,7 +48,7 @@ public:
 
 	void storeWordsInList();//将单词从InFILE中读入数组
 
-	bool findWordInOrder(string searchStr, bool isInsearchFunction);
+	int findWordInOrder(string searchStr, bool isInsearchFunction, int &findcnt);
 
 	void storeWordsInOutFile();
 

@@ -58,8 +58,10 @@ void MyArray::getWordsInLine(char *str,string &tmpString)
 			tmpString += tolower(str[i]);
 		}
 		else if(!tmpString.empty() && tmpString[tmpString.length()-1]!='-'){
-			if (!findWordInOrder(tmpString,0)) {
-				wordsArray[++totWord] = MyWord(tmpString);
+			int cnt = 0;
+			if (findWordInOrder(tmpString,0,cnt)==0) {
+				MyWord tw = MyWord(tmpString);
+				wordsArray[++totWord] = tw;
 			}
 			tmpString.clear();
 		}
@@ -67,26 +69,29 @@ void MyArray::getWordsInLine(char *str,string &tmpString)
 	return;
 }
 
-bool MyArray::findWordInOrder(string searchStr, bool isInsearchFunction)
+int MyArray::findWordInOrder(string searchStr, bool isInsearchFunction,int &findcnt)
 {
 	for (int i = 1;i <= totWord;++i)
 	{
+		findcnt++;
 		if (wordsArray[i].getWord() == searchStr) {
+			
 			if (!isInsearchFunction) wordsArray[i].addCount();
-			return true;
+			return wordsArray[i].getCount();
 		}
 	}
-	return false;
+	return 0;
 }
 
-bool MyArray::binarysSearch(string searchStr)
+int MyArray::binarysSearch(string searchStr,int &cnt)
 {
 	int low = 1, high = totWord;
 	while (low <= high)
 	{
+		cnt++;
 		int mid = (low + high) >> 1;
 		if (wordsArray[mid].getWord() == searchStr) {
-			return true;
+			return wordsArray[mid].getCount();
 		}
 		else if (wordsArray[mid].getWord() < searchStr) {
 			low = mid + 1;
@@ -95,7 +100,7 @@ bool MyArray::binarysSearch(string searchStr)
 			high = mid - 1;
 		}
 	}
-	return false;
+	return 0;
 }
 
 void MyArray::wordsFilter(int filterVal)

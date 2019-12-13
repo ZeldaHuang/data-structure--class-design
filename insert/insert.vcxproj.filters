@@ -45,6 +45,9 @@
     <ClCompile Include="hash_map_function%28array%29.cpp">
       <Filter>源文件\哈希表存储</Filter>
     </ClCompile>
+    <ClCompile Include="pages.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sort.h">
@@ -60,6 +63,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="HashMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pages.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

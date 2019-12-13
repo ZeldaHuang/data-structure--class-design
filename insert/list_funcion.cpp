@@ -6,9 +6,9 @@
 void MyLinkList::storeWordsInList()
 {
 	fstream textFile;
-	textFile.open("InFile.txt", ios::in);
+    textFile.open("InFile.txt", ios::in);
 	if (!textFile) {
-		cout << "读取失败" << endl;//处理异常
+        cout << "读取失败" << endl;//处理异常
 	}
 	char words[MAXLEN];
 	string tmpString;
@@ -27,7 +27,7 @@ void MyLinkList::storeWordsInOutFile()
 	fstream outFile;
 	outFile.open("OutFile2.txt", ios::out);
 	if (!outFile) {
-		cout << "读取失败" << endl;//处理异常
+        cout << "读取失败" << endl;//处理异常
 		return;
 	}
 	outFile << totWord << endl;
@@ -49,7 +49,8 @@ void MyLinkList::getWordsInLine(char *str,string &tmpString)
 			tmpString += tolower(str[i]);
 		}
 		else if (!tmpString.empty() && tmpString[tmpString.length() - 1] != '-') {
-			if (!findWordInOrder(tmpString, 0)) {
+			int cnt = 0;
+			if (!findWordInOrder(tmpString, 0,cnt)) {
 				tailInsert(tmpString);
 			}
 			tmpString.clear();
@@ -72,20 +73,22 @@ void MyLinkList::tailInsert(string insertStr)//尾插法插入数据
 	}
 }
 
-bool MyLinkList::findWordInOrder(string searchStr, bool isInsearchFunction)
+int MyLinkList::findWordInOrder(string searchStr, bool isInsearchFunction,int &cnt)
 {
 	Node *findPtr = head;
 	while (findPtr != NULL)
 	{
+		cnt++;
 		if (findPtr->data.getWord() == searchStr) {
+			
 			if (!isInsearchFunction) {
 				findPtr->data.addCount();
 			}
-			return true;
+			return findPtr->data.getCount();
 		}
 		findPtr = findPtr->next;
 	}
-	return false;
+	return 0;
 }
 
 MyLinkList& MyLinkList::operator=(MyLinkList &tmpList)

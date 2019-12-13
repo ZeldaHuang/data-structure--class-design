@@ -9,7 +9,7 @@ void MyHashMap_StoreWithArray::storeWordsInHashMap()
 	fstream textFile;
 	textFile.open("InFile.txt", ios::in);
 	if (!textFile) {
-		cout << "读取失败" << endl;//处理异常
+        cout << "读取失败" << endl;//处理异常
 	}
 	char words[HASHMAXLEN];
 	string tmpString;
@@ -30,7 +30,8 @@ void MyHashMap_StoreWithArray::getWordsInLine(char *str, string &tmpString)
 		}
 		else if (!tmpString.empty() && tmpString[tmpString.length() - 1] != '-') {
 			int pos;
-			if (!findWordInHashMap(tmpString, 0,pos)) {
+			int cnt = 0;
+			if (!findWordInHashMap(tmpString, 0,pos,cnt)) {
 				hashElems[pos] = MyWord(tmpString);
 				isExist[pos] = 1;
 				totWord++;
@@ -40,23 +41,23 @@ void MyHashMap_StoreWithArray::getWordsInLine(char *str, string &tmpString)
 	}
 	return;
 }
-bool MyHashMap_StoreWithArray::findWordInHashMap(string searchStr, bool isInsearchFunction, int &pos)
+int MyHashMap_StoreWithArray::findWordInHashMap(string searchStr, bool isInsearchFunction, int &pos,int &findCnt)
 {
 	pos = hash(searchStr);
 	int cnt = 0;
-	if(isExist[pos])
 	while (cnt <= HASHMAXLEN / 2 && isExist[pos])
 	{
+		findCnt++;
 		if (hashElems[pos].getWord() == searchStr) {
 			if (!isInsearchFunction) {
 				hashElems[pos].addCount();
 			}
-			return true;
+			return hashElems[pos].getCount();
 		}		
 		cnt++;
 		Collision(pos);	
 	}
-	return false;
+	return 0;
 }
 int MyHashMap_StoreWithArray::hash(string key)//使用BKDR哈希函数处理
 {

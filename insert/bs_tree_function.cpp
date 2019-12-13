@@ -2,7 +2,6 @@
 #include"Word.h"
 #include"BSTree.h"
 #include"Sort.h"
-
 void MyBSTree::storeWordsInTree()
 {
 	fstream textFile;
@@ -28,7 +27,8 @@ void MyBSTree::getWordsInLine(char *str, string &tmpString)
 			tmpString += tolower(str[i]);
 		}
 		else if (!tmpString.empty() && tmpString[tmpString.length() - 1] != '-') {
-			if (!findWordInTree(tmpString, 0,root)) {
+			int cnt = 0;
+			if (!findWordInTree(tmpString, 0,root,cnt)) {
 				locatePosInTree(tmpString,root);
 				totWord++;
 			}
@@ -37,20 +37,21 @@ void MyBSTree::getWordsInLine(char *str, string &tmpString)
 	}
 	return;
 }
-bool MyBSTree::findWordInTree(string &searchStr, bool isInsearchFunction,BiNode *ptr)
+int MyBSTree::findWordInTree(string &searchStr, bool isInsearchFunction,BiNode *ptr,int &cnt)
 {
-	if (ptr == NULL) return false;
+	if (ptr == NULL) return 0;
+	cnt++;
 	if (ptr->data.getWord() == searchStr) {
 		if (!isInsearchFunction) {
 			ptr->data.addCount();
 		}
-		return true;
+		return ptr->data.getCount();
 	}
 	else if (ptr->data.getWord() > searchStr) {
-		return findWordInTree(searchStr, isInsearchFunction, ptr->lchild);
+		return findWordInTree(searchStr, isInsearchFunction, ptr->lchild,cnt);
 	}
 	else {
-		return findWordInTree(searchStr, isInsearchFunction, ptr->rchild);
+		return findWordInTree(searchStr, isInsearchFunction, ptr->rchild,cnt);
 	}
 }
 void MyBSTree::locatePosInTree(string &insertStr, BiNode *ptr)

@@ -117,6 +117,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="pages.cpp" />
     <ClCompile Include="Sort.cpp" />
     <ClCompile Include="bs_tree_function.cpp" />
     <ClCompile Include="array_funcion.cpp" />
@@ -127,6 +128,7 @@
   <ItemGroup>
     <ClInclude Include="BSTree.h" />
     <ClInclude Include="HashMap.h" />
+    <ClInclude Include="pages.h" />
     <ClInclude Include="Word.h" />
     <ClInclude Include="Sort.h" />
     <ClInclude Include="linearList.h" />
